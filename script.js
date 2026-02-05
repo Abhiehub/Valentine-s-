@@ -31,5 +31,5 @@ noBtn.addEventListener('click', () => {
 yesBtn.addEventListener('click', () => {
   // Show the heart message with pop-up animation
   heart.style.display = 'block';  // Make heart message visible
-  heart.style.animation = 'popUp 0.6s ease-in';  // Trigger pop-up animation
+  heart.style.animation = 'popUp 0.6s ease-out';  // Trigger pop-up animation
 });
