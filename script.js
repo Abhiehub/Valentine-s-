@@ -27,7 +27,7 @@ noBtn.addEventListener('click', () => {
 
 // Yes Button Behavior (hide all content and show only the heart)
 yesBtn.addEventListener('click', () => {
-  // Hide all content and buttons (including the "Yes" and "No" buttons)
+  // Hide the question and buttons
   valentineContent.style.display = 'none';  // Hide the question and buttons
-  heart.style.display = 'block';  // Show the final heart message
+  heart.style.display = 'block';  // Show the heart message
 });
