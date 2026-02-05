@@ -60,11 +60,16 @@ button:hover {
 .heart {
   margin-top: 30px;
   font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: heartAnimation 3s ease-in-out forwards;
 }
 
 .big-heart {
-  font-size: 100px;
-  color: red;
+  font-size: 150px;
   animation: pulse 1.5s infinite;
 }
 
@@ -86,6 +91,21 @@ button:hover {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes heartAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
