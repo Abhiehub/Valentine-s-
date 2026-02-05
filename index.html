@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valentine's Day Mini</title>
+  <title>Valentine's Day Surprise</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Envelope -->
-  <div id="envelope" class="envelope">💌</div>
+  <!-- Envelope Section -->
+  <div class="envelope" id="envelope">
+    <span>📬</span>
+  </div>
 
-  <!-- Valentine Content (Hidden initially) -->
-  <div id="valentineContent" class="valentine-content">
-    <p>Will you be my Valentine Mini ❤️😘?</p>
+  <!-- Valentine Content -->
+  <div class="valentine-content" id="valentineContent" style="display: none;">
+    <h1 id="headline">Will you be my Valentine Mini ❤️😘?</h1>
     <div class="buttons">
       <button id="yesBtn">Yes</button>
       <button id="noBtn">No</button>
     </div>
-  </div>
-
-  <!-- Final Text and Popup -->
-  <div id="popup" class="popup" style="display: none;">
-    <div id="finalText">I love you mini 🤍❤️</div>
+    <div id="heart" class="heart" style="display: none;">
+      <h2>I love you mini 🤍❤️</h2>
+      <div class="big-heart">❤️</div>
+    </div>
   </div>
 
   <script src="script.js"></script>
