@@ -117,3 +117,13 @@ button:hover {
     font-size: 100px;
   }
 }
+
+/* Final Text Styling */
+#finalText {
+  font-size: 30px;
+  margin-top: 20px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease; /* Smooth fade-in effect */
+  text-align: center;
+  color: #ff4081; /* Customize color as per preference */
+}
