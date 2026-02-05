@@ -32,15 +32,11 @@ yesBtn.addEventListener('click', () => {
   valentineContent.style.display = 'none';  // Hide the question and buttons
   
   // Show the final text (message) immediately
-  finalText.style.display = 'block';  // Show the final text
-  finalText.style.opacity = '0';  // Set opacity to 0 initially
-  setTimeout(() => {
-    finalText.style.transition = 'opacity 1s ease';  // Apply fade-in transition
-    finalText.style.opacity = '1';  // Fade in the final text
-  }, 100);  // Delay to ensure hiding the initial content before fading in
+  finalText.style.visibility = 'visible';  // Make the final text visible
+  finalText.style.opacity = '1';  // Ensure it's fully visible
   
   // Show the heart message smoothly
-  heart.style.display = 'block';  // Show the heart message
+  heart.style.visibility = 'visible';  // Make the heart visible
   heart.style.opacity = '0'; // Initially set opacity to 0 for smooth fade-in
   setTimeout(() => {
     heart.style.transition = 'opacity 1s ease';  // Add fade-in effect
