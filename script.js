@@ -12,17 +12,22 @@ envelope.addEventListener('click', () => {
   valentineContent.style.display = 'block';
 });
 
-// No Button Behavior (shifting away)
-noBtn.addEventListener('mouseover', () => {
-  const randomX = Math.floor(Math.random() * 300) - 150; // Random X position
-  const randomY = Math.floor(Math.random() * 300) - 150; // Random Y position
-  noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
-  noBtn.style.transition = 'transform 0.5s ease';
+// No Button Behavior (shifting away on every click)
+noBtn.addEventListener('click', () => {
+  // Get random positions for X and Y
+  const randomX = Math.floor(Math.random() * (window.innerWidth - 100)); // Random X position
+  const randomY = Math.floor(Math.random() * (window.innerHeight - 100)); // Random Y position
+
+  // Move the button to the random position
+  noBtn.style.position = 'absolute';
+  noBtn.style.left = `${randomX}px`;
+  noBtn.style.top = `${randomY}px`;
+  noBtn.style.transition = 'left 0.5s ease, top 0.5s ease';  // Smooth transition
 });
 
-// Yes Button Behavior
+// Yes Button Behavior (hide all content and show only the heart)
 yesBtn.addEventListener('click', () => {
-  heart.style.display = 'block';
-  yesBtn.disabled = true;
-  noBtn.disabled = true;  // Disable both buttons after clicking "Yes"
+  // Hide all content and buttons, only show the heart message
+  valentineContent.style.display = 'none';  // Hide all content
+  heart.style.display = 'block';  // Show the final heart message
 });
