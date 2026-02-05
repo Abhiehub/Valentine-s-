@@ -59,14 +59,11 @@ button:hover {
 
 /* Heart Section */
 .heart {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
+  display: none;  /* Initially hidden */
   font-size: 50px;
   text-align: center;
-  display: none;  /* Initially hidden */
+  opacity: 0;
+  animation: popUp 0.6s ease-out forwards;  /* Pop-up animation */
 }
 
 .big-heart {
@@ -80,6 +77,22 @@ button:hover {
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+/* Pop-up Animation */
+@keyframes popUp {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
