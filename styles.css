@@ -8,7 +8,6 @@ body {
   background-color: #fce4ec;
   padding: 10px;
   box-sizing: border-box;
-  position: relative;
 }
 
 .envelope {
@@ -18,11 +17,11 @@ body {
 }
 
 .valentine-content {
+  display: none;
   text-align: center;
   margin-top: 20px;
   width: 100%;
   max-width: 500px;
-  transition: filter 0.5s ease; /* Smooth transition for blur effect */
 }
 
 .buttons {
@@ -58,42 +57,23 @@ button:hover {
   background-color: #9e9e9e;
 }
 
-/* Popup for Final Text */
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 10;
-}
-
-#finalText {
-  font-size: 80px;
-  color: #ff4081;
+/* Heart Section */
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-size: 50px;
   text-align: center;
-  font-weight: bold;
-  animation: flash 1s infinite alternate; /* Flashing effect */
+  display: none;  /* Initially hidden */
 }
 
-/* Flashing animation */
-@keyframes flash {
-  0% {
-    color: #ff4081;
-  }
-  50% {
-    color: #f50057;
-  }
-  100% {
-    color: #ff4081;
-  }
+.big-heart {
+  font-size: 150px;
+  animation: pulse 1.5s infinite;
 }
 
-/* Bounce Animation for Envelope */
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
@@ -103,7 +83,38 @@ button:hover {
   }
 }
 
-/* Apply blur effect to background when popup appears */
-.blur {
-  filter: blur(5px); /* Add blur effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 600px) {
+  .envelope {
+    font-size: 40px;
+  }
+
+  .buttons {
+    gap: 15px;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  .heart {
+    font-size: 30px;
+  }
+
+  .big-heart {
+    font-size: 100px;
+  }
 }
