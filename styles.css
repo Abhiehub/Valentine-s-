@@ -59,7 +59,6 @@ button:hover {
 
 /* Heart Section */
 .heart {
-  display: none; /* Initially hidden */
   position: absolute;
   top: 50%;
   left: 50%;
