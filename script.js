@@ -3,8 +3,7 @@ const envelope = document.getElementById('envelope');
 const valentineContent = document.getElementById('valentineContent');
 const yesBtn = document.getElementById('yesBtn');
 const noBtn = document.getElementById('noBtn');
-const heart = document.getElementById('heart');
-const finalText = document.getElementById('finalText'); // Reference to the final text
+const popup = document.getElementById('popup');
 
 // Open Envelope
 envelope.addEventListener('click', () => {
@@ -26,20 +25,11 @@ noBtn.addEventListener('click', () => {
   noBtn.style.transition = 'left 0.5s ease, top 0.5s ease';  // Smooth transition
 });
 
-// Yes Button Behavior (hide all content and show only the heart and final text)
+// Yes Button Behavior (show the flashy popup)
 yesBtn.addEventListener('click', () => {
   // Hide the Valentine content (question and buttons)
   valentineContent.style.display = 'none';  // Hide the question and buttons
   
-  // Show the final text (message) immediately
-  finalText.style.visibility = 'visible';  // Make the final text visible
-  finalText.style.opacity = '1';  // Ensure it's fully visible
-  
-  // Show the heart message smoothly
-  heart.style.visibility = 'visible';  // Make the heart visible
-  heart.style.opacity = '0'; // Initially set opacity to 0 for smooth fade-in
-  setTimeout(() => {
-    heart.style.transition = 'opacity 1s ease';  // Add fade-in effect
-    heart.style.opacity = '1'; // Change opacity to 1 after the content is hidden
-  }, 100);  // Delay to ensure hiding the initial content before fading in
+  // Show the popup with final text
+  popup.style.display = 'flex';  // Show the popup
 });
