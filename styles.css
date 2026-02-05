@@ -22,6 +22,7 @@ body {
   margin-top: 20px;
   width: 100%;
   max-width: 500px;
+  transition: filter 0.5s ease; /* Smooth transition for blur effect */
 }
 
 .buttons {
@@ -100,4 +101,9 @@ button:hover {
   50% {
     transform: translateY(-20px);
   }
+}
+
+/* Apply blur effect to background when popup appears */
+.blur {
+  filter: blur(5px); /* Add blur effect */
 }
