@@ -25,11 +25,11 @@ noBtn.addEventListener('click', () => {
   noBtn.style.transition = 'left 0.5s ease, top 0.5s ease';  // Smooth transition
 });
 
-// Yes Button Behavior (show the flashy popup)
+// Yes Button Behavior (show the flashy popup and blur background)
 yesBtn.addEventListener('click', () => {
-  // Hide the Valentine content (question and buttons)
-  valentineContent.style.display = 'none';  // Hide the question and buttons
-  
   // Show the popup with final text
   popup.style.display = 'flex';  // Show the popup
+
+  // Apply blur effect to the background (valentineContent)
+  valentineContent.classList.add('blur');
 });
