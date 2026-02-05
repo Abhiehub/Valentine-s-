@@ -37,4 +37,4 @@ yesBtn.addEventListener('click', () => {
     heart.style.transition = 'opacity 1s ease';  // Add fade-in effect
     heart.style.opacity = '1'; // Change opacity to 1 after the content is hidden
   }, 100);  // Delay to ensure hiding of the initial content before fading in
-});
+})
