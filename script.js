@@ -27,7 +27,14 @@ noBtn.addEventListener('click', () => {
 
 // Yes Button Behavior (hide all content and show only the heart)
 yesBtn.addEventListener('click', () => {
-  // Hide the question and buttons
+  // Hide the Valentine content (question and buttons)
   valentineContent.style.display = 'none';  // Hide the question and buttons
+
+  // Show the heart message smoothly
   heart.style.display = 'block';  // Show the heart message
+  heart.style.opacity = '0'; // Initially set opacity to 0 for smooth fade-in
+  setTimeout(() => {
+    heart.style.transition = 'opacity 1s ease';  // Add fade-in effect
+    heart.style.opacity = '1'; // Change opacity to 1 after the content is hidden
+  }, 100);  // Delay to ensure hiding of the initial content before fading in
 });
