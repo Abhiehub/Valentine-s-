@@ -63,9 +63,9 @@ button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 100%;
   font-size: 50px;
   text-align: center;
+  visibility: hidden; /* Initially hidden */
 }
 
 .big-heart {
@@ -122,8 +122,9 @@ button:hover {
 #finalText {
   font-size: 30px;
   margin-top: 20px;
+  visibility: hidden; /* Initially hidden */
   text-align: center;
   color: #ff4081; /* Customize color as per preference */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease; /* Smooth fade-in effect */
+  transition: visibility 0s, opacity 1s ease; /* Smooth transition for visibility */
+  opacity: 0;
 }
