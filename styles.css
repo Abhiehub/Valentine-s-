@@ -92,23 +92,23 @@ button:hover {
 /* Media Query for Small Screens (Mobile) */
 @media (max-width: 600px) {
   .envelope {
-    font-size: 40px; /* Smaller envelope for smaller screens */
+    font-size: 40px; /* Smaller envelope for mobile screens */
   }
 
   .buttons {
-    gap: 15px;
+    gap: 15px; /* Reduce gap between buttons */
   }
 
   button {
     padding: 12px 25px; /* Smaller buttons for mobile */
-    font-size: 16px;
+    font-size: 16px; /* Adjusted font size */
   }
 
   .heart {
-    font-size: 25px;
+    font-size: 25px; /* Adjust heart size */
   }
 
   .big-heart {
-    font-size: 80px;
+    font-size: 80px; /* Adjust big heart size */
   }
 }
