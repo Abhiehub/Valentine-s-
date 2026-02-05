@@ -26,4 +26,3 @@ yesBtn.addEventListener('click', () => {
   yesBtn.disabled = true;
   noBtn.disabled = true;  // Disable both buttons after clicking "Yes"
 });
-
